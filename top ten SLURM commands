@@ -1,0 +1,15 @@
+CONTRUCTION ZONE / work in progress
+
+
+| Command               | Purpose                               | Example                                          |
+| --------------------- | ------------------------------------- | ------------------------------------------------ |
+| **sbatch**            | Submit a batch job                    | `sbatch --partition=test jobscript.sh`           |
+| **squeue --me**       | Show your jobs in the queue           | `squeue --me`                                    |
+| **scontrol show job** | Show full details of a job            | `scontrol show job 12345`                        |
+| **scancel**           | Cancel jobs                           | `scancel 12345` / `scancel --me`                 |
+| **sprio -j**          | Check job priority breakdown          | `sprio -j 12345`                                 |
+| **sshare --me**       | Check your fairshare score            | `sshare --me -l`                                 |
+| **sacct**             | View completed job usage              | `sacct --me --format=JobID,Elapsed,MaxRSS,State` |
+| **srun --pty**        | Start an interactive job (test/debug) | `srun --pty -t 0:30:00 -c 4 bash`                |
+| **sattach**           | Attach to a running interactive job   | `sattach 12345`                                  |
+| **scancel --name**    | Cancel jobs by name                   | `scancel --name=myjob`                           |
